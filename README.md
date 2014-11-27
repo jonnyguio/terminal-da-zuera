@@ -2,8 +2,13 @@ Terminal da Zuera
 =================
 
 Personalização de comandos de terminal para ubuntu (não testado em nenum outro SO, mas sinta-se  à vontade)
-# Instalação
-* Primeiro, clone o repo na pasta desejada:
+
+## features
+* webdev - comando de acesso rápido para pastas que estiverem no `/var/www/` ou `/var/www/html` (o tab funciona *.*)
+* yo - responde "yo yo!"
+
+## Instalação
+* Primeiro, clone o repo:
 `$ git clone https://github.com/graciano/terminal-da-zuera.git`
 * Acesse a pasta
 `$ cd terminal-da-zueira`

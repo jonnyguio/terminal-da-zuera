@@ -1,7 +1,7 @@
 #!/bin/bash
 FLAG_ZUERA="# LET THE ZUERA BEGIN"
-DEFINITIONS_FILE="bash_definitions"
-DEFINITIONS_FILE_ALTERNATIVE="bash_definitions_alternative"
+DEFINITIONS_FILE="bash_definitions.sh"
+DEFINITIONS_FILE_ALTERNATIVE="bash_definitions_alternative.sh"
 echo "========================================================================"
 echo "| This is the pograma Terminal da zuera, by graciano gracilindo        |"
 echo "| É open source: http://github.com/graciano/terminal-da-zuera          |"
@@ -37,7 +37,7 @@ install_zuera(){
 
     if [ "$HOSTNAME"="beta-matheus" ]
     then
-        cat graciano_definitions >> ~/.bashrc
+        cat graciano_definitions.sh >> ~/.bashrc
     fi
 	echo "Se você não viu nehuma mensagem de erro de permissão de escrita etc, tá tudo done"
 }
