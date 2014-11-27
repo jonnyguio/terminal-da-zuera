@@ -6,6 +6,13 @@ Personalização de comandos de terminal para ubuntu (não testado em nenum outr
 ## features
 * webdev - comando de acesso rápido para pastas que estiverem no `/var/www/` ou `/var/www/html` (o tab funciona *.*)
 * yo - responde "yo yo!"
+* s = sudo
+* g=git
+* q=exit
+* ..=cd ..
+* ...=cd ../../
+* tgz=tar -zxvf
+* rm=rm -i  **// confirmação antes de deletar um arquivo**
 
 ## Instalação
 * Primeiro, clone o repo:

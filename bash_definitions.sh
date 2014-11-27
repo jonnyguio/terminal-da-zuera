@@ -3,6 +3,16 @@
 #   zoeira aliases
 alias yo="echo 'yo yo!'"
 
+#   useful aliases from http://askubuntu.com/questions/21290/which-aliases-do-you-find-most-useful-or-helpful-to-your-ubuntu-experience
+
+alias s='sudo ' # the space allows for command name expansion.
+alias g='git'
+alias q='exit'
+alias ..='cd ..'
+alias ...='cd ../../'
+alias tgz='tar -zxvf'
+alias rm='rm -i'  # confirmação antes de deletar um arquivo
+
 #   functions for complicated aliases
 function_show_webdev_folders() {
     for abs_path in $(ls -d /var/www/html/*/); do
