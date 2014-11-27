@@ -59,6 +59,13 @@ function_hu3(){
 	echo "Estes são os comandos da zuera:"
 	echo "    yo"
 	echo "    web-dev <seu-projeto> (webdev <seu-projeto>)"
+	echo "s='sudo '"
+    echo "g='git'"
+    echo "q='exit'"
+    echo "..='cd ..'"
+    echo "...='cd ../../'"
+    echo "tgz='tar -zxvf'"
+    echo "rm=rm -i"
 }
 
 alias hu3=function_hu3
