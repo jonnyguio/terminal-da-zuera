@@ -5,7 +5,7 @@ alias yo="echo 'yo yo!'"
 
 #   functions for complicated aliases
 function_show_webdev_folders() {
-    for abs_path in $(ls -d /var/www/html/*/); do
+    for abs_path in $(ls -d /var/www/*/); do
         local dirs=(${abs_path//\// })
         local length=${#dirs[@]} # Get the length.                                          
         local last_position=$((length - 1)) # Subtract 1 from the length.                   
@@ -23,7 +23,7 @@ function_webdev() {
         echo "Acessar pasta de desenvolvimento web. Eis os argumentos disponíveis:"
         function_show_webdev_folders
     else
-        cd /var/www/html/$1
+        cd /var/www/$1
     fi
 }
 alias web-dev=function_webdev
@@ -33,7 +33,7 @@ alias webdev=function_webdev
 _webdev()
 {
     local response="";
-    for abs_path in $(ls -d /var/www/html/*/); do
+    for abs_path in $(ls -d /var/www/*/); do
         local dirs=(${abs_path//\// })
         local length=${#dirs[@]} # Get the length.                                          
         local last_position=$((length - 1)) # Subtract 1 from the length.                   
@@ -52,4 +52,3 @@ function_hu3(){
 }
 
 alias hu3=function_hu3
-
