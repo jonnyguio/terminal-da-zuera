@@ -18,7 +18,7 @@ Personalização de comandos de terminal para ubuntu (não testado em nenum outr
 * Primeiro, clone o repo:
 `$ git clone https://github.com/graciano/terminal-da-zuera.git`
 * Acesse a pasta
-`$ cd terminal-da-zueira`
+`$ cd terminal-da-zueira/`
 * Execute o instalador:
 `$ ./install.sh`
 * Rode o comando hu3, que mostra os comandos disponíveis
