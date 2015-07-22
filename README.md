@@ -25,5 +25,6 @@ Personalização de comandos de terminal para ubuntu (não testado em nenum outr
 `$ hu3`
 
 ## to do
+* comando de criar comandos
 * mais comandos da zuera
 * aberto a sugestões
