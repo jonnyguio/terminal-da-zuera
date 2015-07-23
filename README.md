@@ -23,6 +23,9 @@ Personalização de comandos de terminal para ubuntu (não testado em nenum outr
 `$ ./install.sh`
 * Rode o comando hu3, que mostra os comandos disponíveis
 `$ hu3`
+* Para desinstalar, execute o desinstalador
+`$ cd terminal-da-zueira/`
+`$ ./uninstall.sh`
 
 ## to do
 * comando de criar comandos
