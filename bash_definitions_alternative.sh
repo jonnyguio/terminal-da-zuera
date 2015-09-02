@@ -78,8 +78,8 @@ function_hu3(){
     echo "...='cd ../../'"
     echo "tgz='tar -zxvf'"
     echo "rm=rm -i"
-    echo "    pulseaudio-start"
-    echo "    pulseaudio-kill"
+    echo "    pulseaudio-start # pára o pulseaudio e o impede de voltar a rodar"
+    echo "    pulseaudio-kill # desfaz o comando acima (somente o pulseaudio --start convencional não resolve"
 }
 
 alias hu3=function_hu3
