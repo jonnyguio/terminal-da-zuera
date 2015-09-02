@@ -12,8 +12,15 @@ alias ..='cd ..'
 alias ...='cd ../../'
 alias tgz='tar -zxvf'
 alias rm='rm -i'  # confirmação antes de deletar um arquivo
+alias pulseaudio-start='pulseaudio --start'
 
 #   functions for complicated aliases
+function_kill_pulseaudio() {
+    echo autospawn = no > $HOME/.config/pulse/client.conf
+    pulseaudio --kill
+    command rm "$HOME/.config/pulse/client.conf"
+}
+
 function_show_webdev_folders() {
     for abs_path in $(ls -d /var/www/*/); do
         local dirs=(${abs_path//\// })
@@ -38,6 +45,7 @@ function_webdev() {
 }
 alias web-dev=function_webdev
 alias webdev=function_webdev
+alias pulseaudio-kill=function_kill_pulseaudio
 
 #   autocomplete for webdev is in ~/.bash_completion.d/webdev
 _webdev()
@@ -66,6 +74,8 @@ function_hu3(){
     echo "...='cd ../../'"
     echo "tgz='tar -zxvf'"
     echo "rm=rm -i"
+    echo "    pulseaudio-start"
+    echo "    pulseaudio-kill"
 }
 
 alias hu3=function_hu3
