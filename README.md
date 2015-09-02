@@ -12,7 +12,9 @@ Personalização de comandos de terminal para ubuntu (não testado em nenum outr
 * ..=cd ..
 * ...=cd ../../
 * tgz=tar -zxvf
-* rm=rm -i  **// confirmação antes de deletar um arquivo**
+* rm=rm -i  **# confirmação antes de deletar um arquivo**
+* pulseaudio-kill *# pára o pulseaudio e o impede de voltar a rodar*
+* pulseaudio-start *# desfaz o comando acima (somente o pulseaudio --start convencional não resolve*
 
 ## Instalação
 * Primeiro, clone o repo:
@@ -29,5 +31,6 @@ Personalização de comandos de terminal para ubuntu (não testado em nenum outr
 
 ## to do
 * comando de criar comandos
+* remover redundância do bash_alternatives
 * mais comandos da zuera
 * aberto a sugestões
