@@ -9,9 +9,8 @@ echo "| É open source: http://github.com/graciano/terminal-da-zuera          |"
 echo "|----------------------------------------------------------------------|"
 echo "|Este pograma irá acrescentar conteúdo ao final do seu arquivo .bashrc.|"
 echo "|Para isto, será colocado um comentário com a constante                |"
-echo "| '# LET THE ZUERA BEGIN'.                                             |"
-echo "|Tudo que for escrito depois deste comentário será substituído pelo    |"
-echo "| conteúdo do arquivo bash_definitions                                 |"
+echo "| '# LET THE ZUERA BEGIN'. E após o conteúdo específico, a constante   |"
+echo "| '# LET THE ZUERA END'.                                               |"
 echo "|______________________________________________________________________|"
 clear_previous_instalation(){
     NUMBER_START=$(awk "/$FLAG_ZUERA/{ print NR; exit }" ~/.bashrc)
@@ -23,14 +22,18 @@ clear_previous_instalation(){
     else
         if [ -z "$NUMBER_END"]
         then
-	       echo "Instalação de versão pré 0.2 encontrada, removendo conteúdo do arquivo $DEFINITIONS_FILE a partir da linha $NUMBER"
-	       sed -ni "/^$FLAG_ZUERA$/q;p" ~/.bashrc
+            echo "Instalação de versão pré 0.2 encontrada, removendo conteúdo do arquivo $DEFINITIONS_FILE a partir da linha $NUMBER"
+            sed -ni "/^$FLAG_ZUERA$/q;p" ~/.bashrc
         else
             echo "Instalação encontrada. Todo o conteúdo entre $FLAG_ZUERA e $FLAG_END_ZUERA será removido do arquivo ~/.bashrc"
             sed -ni "/-$NUMBER_START/,/-$NUMBER_END/" ~/.bashrc
         fi
     fi
 }
+
+DIR=$( cd "$( terminal-da-zuera "${BASH_SOURCE[0]}" )" && pwd )
+
+"$DIR/installation_script.sh"
 
 install_zuera(){
     clear_previous_instalation

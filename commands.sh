@@ -6,9 +6,9 @@
 # the '#end-command' line.
 # 
 # If the command depends on a var given in instalation,
-# mark the first line with '#command!' and in the thrid
-# line, put the variable with a fallback value. Then,
-# end the var declaration with a line '#end-vars'
+# starting in the thrid line from the '#command' line
+# put the variables with a fallback value. Then, end
+# the var declaration with a line '#end-vars'
 ###########################################################
 
 #command
@@ -76,8 +76,7 @@ function_start_pulseaudio() {
 alias pulseaudio-start=function_start_pulseaudio
 #end-command
 
-
-#command!
+#command
 #webdev <project-folder> #quick acces to dev folder
 WEBDEV_DIR='var/www/html/'
 #end-vars
