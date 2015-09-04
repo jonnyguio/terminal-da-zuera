@@ -30,7 +30,7 @@ function_get_script(){
 				if [[ "$state" == 'command' ]]; then
 					for v in "${vars[@]}"; do
 						read -p "Dê um valor para ${v}:" valor
-						echo "${v}=${valor}" >> "${output_file}"
+						echo "${v}${valor}" >> "${output_file}"
 					done
 				fi
 				echo -e "${output}" >> "${output_file}"
