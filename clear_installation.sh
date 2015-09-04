@@ -12,7 +12,7 @@ clear_previous_installation(){
            sed -ni "/^$FLAG_ZUERA$/q;p" ~/.bashrc
         else
             echo "Instalação encontrada. Todo o conteúdo entre $FLAG_ZUERA e $FLAG_END_ZUERA será removido do arquivo ~/.bashrc"
-            sed "/${NUMBER_END}/ p; /${NUMBER_START}/,/${NUMBER_END}/ d;" ~/.bashrc
+            sed -ni "/${NUMBER_START}/,/${NUMBER_END}/d;" ~/.bashrc
         fi
     fi
 }
