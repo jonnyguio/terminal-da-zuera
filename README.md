@@ -21,12 +21,11 @@ Personalização de comandos de terminal para ubuntu (não testado em nenum outr
 `$ git clone https://github.com/graciano/terminal-da-zuera.git`
  2. Acesse a pasta
 `$ cd terminal-da-zueira/`
- 3. Se você deu clone, dê checkout na tag da última release estável, exemplo: `git checkout -b my_branch v0.2.2`
- 4. Execute o instalador:
+ 3. Execute o instalador:
 `$ ./install.sh`
- 5. Rode o comando hu3, que mostra os comandos disponíveis
+ 4. Rode o comando hu3, que mostra os comandos disponíveis
 `$ hu3`
- 6. Para desinstalar, execute o desinstalador
+ 5. Para desinstalar, execute o desinstalador
 `$ cd terminal-da-zueira/`, depois
 `$ ./uninstall.sh`
 
