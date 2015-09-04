@@ -6,6 +6,7 @@ function_get_script(){
 	cont_var=0
 	vars_dont_use=
 	vars=
+	commands=
 
 	output_file="$1"
 	# Esse código está muito confuso, é que eu sou ruim em bash, malz aê
@@ -39,8 +40,8 @@ function_get_script(){
 				vars_output=''
 			elif [[ ! ($line =~ ^#) ]]; then
 				if [[ "$state" == 'idle' ]]; then
-					state='vars'
-				fi	
+					state='description'
+				fi
 				if [[ "$state" == 'command' ]]; then
 					output="$output\n$line"
 				elif [[ "$state" == 'vars' ]]; then
@@ -49,8 +50,14 @@ function_get_script(){
 					(( cont_var++ ))
 					output="$output\n$line"
 				fi
+			elif [[ "$state" == 'description' ]]; then
+				commands+=("$line#^#") # cuts first '#' of line
+				state='vars'
 			fi
 		fi
+	done
+	for c in "${commands[@]}"; do
+		echo "${c}" >> "${output_file}"
 	done
 	unset IFS
 }

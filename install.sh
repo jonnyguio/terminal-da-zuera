@@ -11,7 +11,7 @@ echo "| '# LET THE ZUERA BEGIN'. E após o conteúdo específico, a constante   
 echo "| '# LET THE ZUERA END'.                                               |"
 echo "|______________________________________________________________________|"
 
-DIR=$( cd "$( terminal-da-zuera "${BASH_SOURCE[0]}" )" && pwd )
+DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 
 source "$DIR/installation_script.sh"
 source "$DIR/clear_installation.sh"

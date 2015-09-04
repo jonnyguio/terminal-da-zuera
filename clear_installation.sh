@@ -8,10 +8,11 @@ clear_previous_installation(){
     else
         if [ -z "$NUMBER_END" ]
         then
-           echo "Instalação de versão pré 0.2 encontrada, removendo conteúdo do arquivo $DEFINITIONS_FILE a partir da linha $NUMBER"
+           echo "Instalação de versão pré 0.2 (ou corrompida) encontrada, removendo conteúdo do arquivo $DEFINITIONS_FILE a partir da linha $NUMBER_START"
            sed -ni "/^$FLAG_ZUERA$/q;p" ~/.bashrc
         else
             echo "Instalação encontrada. Todo o conteúdo entre $FLAG_ZUERA e $FLAG_END_ZUERA será removido do arquivo ~/.bashrc"
+            sleep 10
             sed -ni "/${NUMBER_START}/,/${NUMBER_END}/d;" ~/.bashrc
         fi
     fi
