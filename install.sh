@@ -21,15 +21,7 @@ source "$DIR/clear_installation.sh"
 install_zuera(){
     clear_previous_installation
     echo "$FLAG_ZUERA" >> ~/.bashrc
-    echo "Você usa a pasta /var/www/html?"
-     read -p "Caso não, o programa assume que seja a /var/www/ " choice
-     if [[ $choice =~ ^[Yy]$ ]]
-     then
-          cat "$DEFINITIONS_FILE" >> ~/.bashrc
-     else
-         cat "$DEFINITIONS_FILE_ALTERNATIVE" >> ~/.bashrc
-     fi
-    # function_get_script ~/.bashrc
+    function_get_script ~/.bashrc
     if [ "$HOSTNAME"="beta-matheus" ]
     then
         echo "Computador do graciano encontrado. Instalando comandos específicos..."
