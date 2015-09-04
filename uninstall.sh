@@ -10,7 +10,7 @@ echo "| feito antes.                                                         |"
 echo "| Não foi pra sempre, mas que seja eterno enquanto dure :p             |"
 echo "|______________________________________________________________________|"
 
-DIR=$( cd "$( terminal-da-zuera "${BASH_SOURCE[0]}" )" && pwd )
+DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 
 source "$DIR/clear_installation.sh"
 
