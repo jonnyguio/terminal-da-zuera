@@ -1,8 +1,6 @@
 #!/bin/bash
 FLAG_ZUERA="# LET THE ZUERA BEGIN"
 FLAG_END_ZUERA="# LET THE ZUERA END"
-DEFINITIONS_FILE="bash_definitions.sh"
-DEFINITIONS_FILE_ALTERNATIVE="bash_definitions_alternative.sh"
 echo "========================================================================"
 echo "| This is the pograma Terminal da zuera, by graciano gracilindo        |"
 echo "| É open source: http://github.com/graciano/terminal-da-zuera          |"
