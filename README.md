@@ -17,16 +17,16 @@ Personalização de comandos de terminal para ubuntu (não testado em nenum outr
 * pulseaudio-start *# desfaz o comando acima (somente o pulseaudio --start convencional não resolve*
 
 ## Instalação
-* Primeiro, clone o repo:
+ 1. Primeiro, clone o repo (ou baixe a última [release](https://github.com/graciano/terminal-da-zuera/releases)):
 `$ git clone https://github.com/graciano/terminal-da-zuera.git`
-* Acesse a pasta
+ 2. Acesse a pasta
 `$ cd terminal-da-zueira/`
-* Execute o instalador:
+ 3. Execute o instalador:
 `$ ./install.sh`
-* Rode o comando hu3, que mostra os comandos disponíveis
+ 4. Rode o comando hu3, que mostra os comandos disponíveis
 `$ hu3`
-* Para desinstalar, execute o desinstalador
-`$ cd terminal-da-zueira/`
+ 5. Para desinstalar, execute o desinstalador
+`$ cd terminal-da-zueira/`, depois
 `$ ./uninstall.sh`
 
 ## to do
